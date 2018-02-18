@@ -11,7 +11,7 @@ const Weather = function() {
   // GET CURRENT WEATHER
   Weather.prototype.getWeather = function() {
     return new Promise((resolve, reject) => {
-      fetch(`http://api.wunderground.com/api/${this.apiKey}/conditions/q/${this.state}/${this.city}.json`)
+      fetch(`https://api.wunderground.com/api/${this.apiKey}/conditions/q/${this.state}/${this.city}.json`)
       .then(res => res.json())
       .then(data => resolve(data))
       .catch(err => reject(err));
