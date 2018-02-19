@@ -39,8 +39,15 @@ const UI = function() {
 UI.prototype.displayWeather = function(weather) {
   this.icon.setAttribute('src', weather.current_observation.icon_url);
   this.desc.textContent = `(${weather.current_observation.weather})`;
-  const regex = new RegExp('mostly cloudy','gi');
-  if(weather.current_observation.weather === "Mostly Cloudy" || weather.current_observation.weather === "Cloudy" || weather.current_observation.weather === "Partly Cloudy" || weather.current_observation.weather === "Rain" || weather.current_observation.weather === "Snow") {
+  
+  if (
+    weather.current_observation.weather === "Mostly Cloudy" || 
+    weather.current_observation.weather === "Cloudy" || 
+    weather.current_observation.weather === "Partly Cloudy" || 
+    weather.current_observation.weather === "Rain" || 
+    weather.current_observation.weather === "Snow" ||
+    weather.current_observation.weather === "Overcast"
+  ) {
     this.answer.textContent = 'Yes...';
   } else {
     this.answer.textContent = 'No!';
