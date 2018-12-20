@@ -6,18 +6,18 @@ class Weather {
     this.city = 'Youngstown';
     this.state = 'OH';
   }
-  // GET CURRENT WEATHER
-  getWeather() {
-    return new Promise((resolve, reject) => {
-      fetch(
+
+  async getWeather() {
+    try {
+      const data = await fetch(
         `https://api.wunderground.com/api/${this.apiKey}/conditions/q/${
           this.state
         }/${this.city}.json`
-      )
-        .then(res => res.json())
-        .then(data => resolve(data))
-        .catch(err => reject(err));
-    });
+      );
+      return data.json();
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
