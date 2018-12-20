@@ -27,7 +27,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; 
+  font-size: 62.5%;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat; */
   min-height: 100vh;
-} 
+}
 
 .container {
   width: 100%;
@@ -93,7 +93,7 @@ body {
   justify-content: center;
   background-color: var(--color-grey-light-1);
   border-radius: 50%;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .forecast:hover {
@@ -124,12 +124,10 @@ body {
 
 .response__heading {
   font-size: 4rem;
-
 }
 
 .response__text {
   font-size: 2rem;
-
 }
 
 .weather-stats span {
@@ -150,7 +148,6 @@ a:visited {
   display: none;
 }
 
-
 .footer {
   text-align: center;
   padding-top: 2rem;
@@ -167,7 +164,7 @@ a:visited {
 .social a:visited {
   color: var(--color-grey-dark-2);
   text-decoration: none;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .social a:hover {
@@ -184,15 +181,14 @@ a:visited {
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
-   
   }
-  
+
   .container {
     width: 60%;
     min-height: 80vh;
     margin-top: 4rem;
-    box-shadow: 0 1rem 3rem rgba(0,0,0, .1);
-    background-color: rgba(240, 238, 238, .7);  
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    background-color: rgba(240, 238, 238, 0.7);
   }
 
   .footer {
@@ -208,7 +204,7 @@ a:visited {
 
   .social a:hover {
     color: var(--color-grey-light-4);
-  } 
+  }
 }
 
 @media (min-width: 1200px) {
